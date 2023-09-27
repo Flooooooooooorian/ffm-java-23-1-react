@@ -1,5 +1,3 @@
-
-
 type BlogEntryProps = {
     title: string,
     content: string,
@@ -8,8 +6,10 @@ type BlogEntryProps = {
 
 export default function BlogEntry(props: BlogEntryProps) {
 
-    props.myCallback("Hallo ich bin die BlogEntry mein Blog Titel ist: " + props.title)
-
+    function myButtonClick() {
+        console.log("Button click")
+        props.myCallback("Hallo ich bin die BlogEntry mein Blog Titel ist: " + props.title)
+    }
 
     return (
         <div>
@@ -17,6 +17,9 @@ export default function BlogEntry(props: BlogEntryProps) {
             <p>
                 {props.content}
             </p>
+            <button onClick={myButtonClick}>
+                Click
+            </button>
         </div>
     )
 }

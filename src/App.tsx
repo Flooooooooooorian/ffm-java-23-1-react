@@ -1,6 +1,7 @@
 import './App.css'
 import Header from "./Header.tsx";
 import BlogEntry from "./BlogEntry.tsx";
+import Counter from "./Counter.tsx";
 
 
 export default function App() {
@@ -58,6 +59,8 @@ export default function App() {
                     Press Me
                 </button>
             </div>
+
+            <Counter />
         </div>
     )
 }
